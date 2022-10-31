@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import Loader from "../Components/Loader";
 import classes from "./Repos.module.css";
 
-const Repos = () => {
+const Repos = (props) => {
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState(false)
   const [repos, setRepos] = useState([])
@@ -18,7 +18,6 @@ const Repos = () => {
       }
       const data = await response.json();
       setRepos(data)
-      console.log(data)
     } catch (error) {
       setError(error.message);
     }
@@ -29,6 +28,8 @@ const Repos = () => {
   useEffect(()=>{
     getRepos()
   },[getRepos])
+
+  props.getData(repos)
 
   let content = <h1>No Repos Found!</h1>
   if (isLoading) {
