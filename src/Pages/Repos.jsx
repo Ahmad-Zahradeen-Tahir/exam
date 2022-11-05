@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import Loader from "../Components/Loader";
 import Pagination from "../Components/Pagination";
 import classes from "./Repos.module.css";
+import Fade from 'react-reveal/Fade';
 
 const Repos = (props) => {
   const [isLoading, setIsLoading] = useState(false);
@@ -57,7 +58,7 @@ const Repos = (props) => {
             activeClassName={classes.active}
             to={`/Repos/${el.node_id}`}
           >
-            <li className={classes.repo}>{el.name}</li>
+            <Fade left><li className={classes.repo}>{el.name}</li></Fade>
           </NavLink>
         ))}
       </ul>
