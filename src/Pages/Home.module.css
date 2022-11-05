@@ -1,0 +1,29 @@
+.home *{
+    color: white;
+    width: 100%;
+}
+
+.home h1{
+    font-size: 2.9em;
+}
+
+.home h2{
+    font-size: 2.3em;
+}
+
+.home h3{
+    font-size: 1.5em;
+}
+
+.home button{
+    font-size: 25px;
+    background-color: rgb(192, 43, 226);
+    border-radius: 20px;
+    cursor: pointer;
+    padding: 2px;
+    width: 30%;
+}
+
+.home button:hover{
+    background-color: rgb(210, 91, 204);
+}

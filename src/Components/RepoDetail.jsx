@@ -12,12 +12,12 @@ const RepoDetail = (props) => {
       <NavLink to="/Repos">
         <button className={classes.btn}>Go back</button>
       </NavLink>
-      <div className={classes.desc}>
+      <section className={classes.desc}>
         <p>title:{repo.name}</p>
         <p>watchers:{repo.watchers}</p>
         <p>language:{repo.language}</p>
         <p>forks:{repo.forks}</p>
-      </div>
+      </section>
     </>
   );
 };
