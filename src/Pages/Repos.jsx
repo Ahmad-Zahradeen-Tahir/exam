@@ -4,6 +4,7 @@ import Loader from "../Components/Loader";
 import Pagination from "../Components/Pagination";
 import classes from "./Repos.module.css";
 import Fade from 'react-reveal/Fade';
+import errorBoundary from "./error.jpg";
 
 const Repos = (props) => {
   const [isLoading, setIsLoading] = useState(false);
@@ -46,7 +47,7 @@ const Repos = (props) => {
   }
 
   if (error) {
-    content = <h1 className={classes.error}>{error}</h1>;
+    content = <img className={classes.errorBoundary} src={errorBoundary} alt="Image showing error" />;
   }
 
   if (repos.length > 0) {
