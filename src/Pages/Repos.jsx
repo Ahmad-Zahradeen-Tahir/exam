@@ -18,7 +18,7 @@ const Repos = (props) => {
     setError(null);
     try {
       const response = await fetch(
-        "https://api.github.com/users/Susboi20/repos"
+        "https://api.github.com/users/Ahmad-Zahradeen-Tahir/repos"
       );
       if (!response.ok) {
         throw new Error("OOPS! Something went wrong!");
