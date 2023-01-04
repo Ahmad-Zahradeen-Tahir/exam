@@ -10,9 +10,6 @@ const RepoDetail = (props) => {
 
   return (
     <>
-      <NavLink to="/Repos">
-        <button className={classes.btn}>Go back</button>
-      </NavLink>
       <Fade bottom >
       <section className={classes.desc}>
         <p>title:{repo.name}</p>
@@ -21,6 +18,9 @@ const RepoDetail = (props) => {
         <p>forks:{repo.forks}</p>
       </section>
       </Fade>
+      <NavLink to="/Repos">
+        <button className={classes.btn}>Go back</button>
+      </NavLink>
     </>
   );
 };
